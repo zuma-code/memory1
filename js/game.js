@@ -1,5 +1,9 @@
 class MemoryGame {
     constructor() {
+        this.startScreen =document.getElementById("game-intro");
+        this.gameScreen =document.getElementById("game-screen");
+        this.gameEndScreen =document.getElementById("game-end");
+
         this.checkArray = [];
         this.idCheck = [];
         this.counter = 0;
@@ -37,12 +41,24 @@ class MemoryGame {
         this.init();
     }
 
-    init() {
+    init () { 
+        this.startScreen.style.display = "block";
+        this.gameScreen.style.display = "none";
+        this.gameEndScreen.style.display = "none";
+     }
+       
+        
+
+    start() {
+        this.startScreen.style.display = "none";
+        this.gameScreen.style.display = "block";
+        this.gameEndScreen.style.display = "none";
         const fields = document.querySelectorAll(".field");
-        fields.forEach(field => {
-            field.addEventListener("click", this.clicked.bind(this));
-        });
-        this.startGame();
+         fields.forEach(field => {
+        field.addEventListener("click", this.clicked.bind(this));
+         });
+
+            this.startGame();
     }
     
 

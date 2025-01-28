@@ -1,17 +1,24 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Memory Game</title>
-    <link rel="stylesheet" href="./styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
+
 <body>
+
+<div id="game-intro">
+     <span>This is the game intro</span>
+     <h1>Memory Game </h1>
+     <p> pick any two cards and find the match</p> 
+</div> 
+
+<div id="game-screen"> 
     <div class="wrapper">
-        <h1>Memory Game </h1>
-        <p>(Not optimized for mobile phones)</p>
+       
         <div class="result">
             <p>Result</p>
             <span>(Less is better!)</span>
@@ -45,6 +52,11 @@
             <div class="field" id="24"><div class="inner-wrap"><div class="front"></div><div class="back"></div></div></div>
         </div>
     </div>
+</div>
+
+<div id="game-end">
+    <span>game-end</span>
+</div>
     <script src="./js/game.js"></script>
     
     <script src="./js/script.js" defer></script>
