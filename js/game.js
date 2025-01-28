@@ -1,4 +1,4 @@
-class MemoryGame {
+class Game {
     constructor() {
         this.startScreen =document.getElementById("game-intro");
         this.gameScreen =document.getElementById("game-screen");
@@ -45,6 +45,7 @@ class MemoryGame {
         this.startScreen.style.display = "block";
         this.gameScreen.style.display = "none";
         this.gameEndScreen.style.display = "none";
+
      }
        
         
@@ -114,7 +115,7 @@ class MemoryGame {
     }
 
     startGame() {
-        this.natureSound.play();
+       // this.natureSound.play();
         const arr = this.shuffleArray(this.images);
         for (let i = 0; i < this.fields.length; i++) {
             const img = document.createElement("img");
@@ -165,4 +166,4 @@ class MemoryGame {
 
     
         // Start the memory game when the DOM is fully loaded
- new MemoryGame()
+ new Game()
