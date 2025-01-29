@@ -35,6 +35,10 @@ body {
 	cursor: pointer;
 	
 }
+.styled-button:hover{
+	background: #45a049; /* Color de fondo cuando el mouse pasa por encima */
+    transform: scale(1.1); /* Agrandar el botón un poco */
+}
 #timer-wrapper {
 	display: flex;
 	justify-content: right;
@@ -46,7 +50,7 @@ body {
 #timer {
 	
 	display: flex;
-	font-size: 40px;
+	font-size: 60px;
     font-family: cursive;
     color: rgb(217, 103, 29);
 	justify-content: right;
