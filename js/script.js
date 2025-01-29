@@ -17,28 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.error("Start button not found in the DOM.");
     }
-       
-     if (restartButton) {
-         restartButton.addEventListener("click", () => {
-                console.log("Restart Game!");
 
-               game.init();
-            });
-        } else {
-            console.error("Restart button not found in the DOM.");
-        }
-   
-
-  
+    if (restartButton) {
+        restartButton.addEventListener("click", () => {
+            window.location.reload();
+    });
+}
 
     
-    if (finishButton) {
-        finishButton.addEventListener("click", () => {
-            console.log("finish  Game");
-            game.endGame();
-        });
-    } else {
-        console.error("finish button not found in the DOM.");
-    }
 
+if (finishButton) {
+    finishButton.addEventListener("click", () => {
+        console.log("Finish Game");
+        if (game) {
+            game.endGame(); // End the game properly
+        }
+    });
+} else {
+    console.error("Finish button not found in the DOM.");
+}
 });

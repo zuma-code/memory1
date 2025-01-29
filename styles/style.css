@@ -22,7 +22,7 @@ body {
 
 }
 
-#start-button{
+.styled-button{
 	display: flex;
 	margin: 0 auto;
 	margin: 50px;

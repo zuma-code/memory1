@@ -41,7 +41,7 @@
             "https://res.cloudinary.com/nikola1970/image/upload/v1456692134/watermelon_wfzuz8.png"
         ];
         this.init();
-       // this.timer.onTimeUp = () => this.endGame();
+     
     }
 
     init() {
@@ -132,7 +132,8 @@
          const timer = new Timer();
          timer.timer
         timer.startTimer();
-        //this.timer.startTimer(); // Iniciar el temporizador
+        console.log(timer.timer);
+        
         
    }
 

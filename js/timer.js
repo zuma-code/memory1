@@ -1,6 +1,10 @@
  class Timer {
     constructor() {
-        this.timer = 0; 
+        this.startScreen= document.getElementById("game-intro");
+        this.gameScreen= document.getElementById("game-screen");
+        this.gameEndScreen= document.getElementById("game-end");
+
+        this.timer = 60; 
         this.intervalID = null;
     }
 
@@ -8,14 +12,16 @@
         if (this.intervalID !== null) return; // Evita iniciar múltiples intervalos
 
         this.intervalID = setInterval(() => {
-            this.timer++;
+            this.timer--;
             document.getElementById("timer").textContent = this.timer; // Mostrar en la UI
-            console.log(`Tiempo: ${this.timer} segundos`);
+            console.log(`Time remaining: ${this.timer} seconds`);
 
             // Si llega a 120 segundos, detener el juego
-            if (this.timer >= 5) {
+            if (this.timer <= 0) {
                 this.stopTimer();
-                if (this.onTimeUp) this.onTimeUp(); // Llamar al callback si existe
+                this.startScreen.style.display = "none";
+                this.gameScreen.style.display = "none";
+                this.gameEndScreen.style.display = "block";
             }
         }, 1000);
     }
