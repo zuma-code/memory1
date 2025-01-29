@@ -10,6 +10,59 @@ body {
 	background: url(https://res.cloudinary.com/nikola1970/image/upload/v1456692130/body-bg_ovz9eo.png) top center no-repeat;
 }
 
+#game-intro p, h1 {
+    color: #333333; /* Cambiar color del texto */
+    font-size: 30px; /* Cambiar tamaño de fuente */
+    font-family: cursive; 
+    text-align: center; /* Centrar el texto */
+	padding: 30px;
+    margin: 20px 0; /* Espaciado superior e inferior */
+	background: url(https://res.cloudinary.com/nikola1970/image/upload/v1456692129/bg_qsnd0u.jpg) no-repeat top center;
+	width: 100%;
+
+}
+
+#start-button{
+	display: flex;
+	margin: 0 auto;
+	margin: 50px;
+	padding: 10px 20px;
+	background:url(https://res.cloudinary.com/nikola1970/image/upload/v1456692129/bg_qsnd0u.jpg) no-repeat top center;
+	border: 1px solid #333;
+	border-radius: 5px;
+	font-size: 20px;
+	font-family: cursive;
+	cursor: pointer;
+	
+}
+#timer-wrapper {
+	display: flex;
+	justify-content: right;
+	flex-direction: column;
+	align-items: right;
+	width: 50%;
+	text-align: right;
+}
+#timer {
+	
+	display: flex;
+	font-size: 40px;
+    font-family: cursive;
+    color: rgb(217, 103, 29);
+	justify-content: right;
+	
+	align-items: right;
+	text-align: right;	
+	height: 20px;
+	background: none;
+}
+
+#progress-bar {
+	width: 100px;
+	height: 20px;
+	background: rgb(217, 103, 29);
+	margin-top: 20px;
+}
 .wrapper {
 	max-width: 900px;
 	width: 100%;
@@ -25,8 +78,14 @@ h1 {
 }
 
 img {
-	max-width: 86%;
+	max-width: 70%;
 	height: auto;
+	margin-top: 20px;
+}
+
+.table{
+	width: 70%;
+	height: 100%;
 	margin-top: 20px;
 }
 
@@ -37,9 +96,9 @@ img {
 }
  
 .field {
-	width: 14%;
+	width: 10%;
 	margin: 1% 1%;
-	height: 150px;
+	height: 120px;
 	border: 1px solid #000;
 	border-radius: 8px;
 	float: left;

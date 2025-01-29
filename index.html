@@ -13,7 +13,7 @@
 <div id="game-intro">
      <span>This is the game intro</span>
      <h1>Memory Game </h1>
-     <p> pick any two cards and find the match</p> 
+     <p> Find the match</p> 
      <button id = "start-button"> Start Game</button>
 
 </div> 
@@ -22,10 +22,13 @@
     <div class="wrapper">
        
         <div class="result">
-            <p>Result</p>
+            <p>Turn</p>
             <span>(Less is better!)</span>
             <p class="counter">0</p>
         </div>
+       
+
+       </div>
         <div class="table">
             <!-- Fields go here -->
             <div class="field" id="1"><div class="inner-wrap"><div class="front"></div><div class="back"></div></div></div>
@@ -53,14 +56,31 @@
             <div class="field" id="23"><div class="inner-wrap"><div class="front"></div><div class="back"></div></div></div>
             <div class="field" id="24"><div class="inner-wrap"><div class="front"></div><div class="back"></div></div></div>
         </div>
+
+        <button id="finish-button"><span>End Game</span> </button>
+        <button id="restart-button"> <span>Try again</span></button>
+       
+        <div id="timer-wrapper">
+            <div id="timer">Time: 0 </div>       
+            <div id="progress-bar"></div>
+        </div>
+       
+        </div>
+
     </div>
+   
 </div>
 
 <div id="game-end">
-    <span>game-end</span>
-</div>
-    <script src="./js/game.js"></script>
+   
     
+    <h1>end!!!</h1>
+    
+</div>
+    <script  src="./js/game.js"></script> <!-- Import module properly -->
+   
+    <script  src="./js/timer.js"></script>
+   
     <script src="./js/script.js" defer></script>
 
 </body>
